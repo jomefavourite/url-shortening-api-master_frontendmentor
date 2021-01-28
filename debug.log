@@ -1,0 +1,8 @@
+[0108/141340.145:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[0108/141340.256:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\Hp\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\0e16eb2b-1d3a-4b10-82d2-ea4c8a51b82c: The system cannot find the path specified. (0x3)
+[0108/172043.616:ERROR:filesystem_win.cc(148)] DeleteFile C:\Users\Hp\AppData\Local\Google\Chrome\User Data\Crashpad\reports\88d2cff3-7db7-4531-a259-12140b25e55c.dmp: The process cannot access the file because it is being used by another process. (0x20)
+[0114/112335.790:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[0114/112556.442:ERROR:process_info.cc(359)] UncheckedAllocate
+[0114/112853.565:ERROR:process_info.cc(359)] UncheckedAllocate
+[0114/200733.540:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[0115/131010.215:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)

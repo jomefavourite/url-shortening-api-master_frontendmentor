@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+}
+
+p {
+  @apply text-color5;
+}
+
+.form {
+  position: absolute;
+  top: 0;
+  transform: translateY(-50%);
+}
+
+.loader {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 10px solid white;
+  border-top: 10px solid #2acfcf;
+  margin: 30px auto;
+  animation: spin 900ms ease-in infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.statIcon {
+  position: absolute;
+  top: 0%;
+  transform: translate(-50%, -50%);
+}
+
+/* .stat + .stat {
+  margin-top: 6rem;
+}
+
+@screen lg {
+  .stat + .stat {
+    margin-top: 0rem;
+  }
+} */
+
+footer p {
+  @apply mb-2 cursor-pointer hover:text-color1;
+}
+
+@tailwind utilities;
+/* - Cyan: hsl(180, 66%, 49%)
+- Dark Violet: hsl(257, 27%, 26%)
+
+### Secondary
+
+- Red: hsl(0, 87%, 67%)
+
+### Neutral
+
+- Gray: hsl(0, 0%, 75%)
+- Grayish Violet: 
+- Very Dark Blue: 
+- Very Dark Violet:  */
