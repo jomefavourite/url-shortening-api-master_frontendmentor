@@ -2,6 +2,7 @@ import React, {useState, useEffect, useRef} from "react";
 import axios from "axios";
 import {CopyToClipboard} from "react-copy-to-clipboard";
 import Loader from "./Loader";
+import Error from "./Error";
 
 const Shorten = () => {
   const [content, setContent] = useState("");
@@ -40,10 +41,16 @@ const Shorten = () => {
         setShortLink({
           loading: false,
           data: [...shortLink.data, response.data],
-          copied: false,
         });
       })
-      .catch(err => console.log(err));
+      .catch(err => {
+        setShortLink({
+          loading: false,
+          data: [...shortLink.data],
+          error: true,
+        });
+        console.log(err);
+      });
   }
 
   const handleSubmit = e => {
@@ -93,7 +100,7 @@ const Shorten = () => {
               aria-label='copy'
               onClick={e => onCopy(e)}
             >
-             Copy
+              Copy
             </button>
           </CopyToClipboard>
         </div>
@@ -103,6 +110,10 @@ const Shorten = () => {
 
   if (shortLink.loading) {
     displayLink = <Loader />;
+  }
+
+  if (shortLink.error) {
+    displayLink = <Error />;
   }
 
   return (
